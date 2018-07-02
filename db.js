@@ -6,7 +6,7 @@ function login() {
         port: 3306,
         user: "root", 
         password: "root", 
-        database: "Bamazon", 
+        database: "bamazon", 
         multipleStatements: true
     });
 

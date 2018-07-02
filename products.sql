@@ -1,16 +1,15 @@
-create database Bamazon;
+-- create database Bamazon;
+use bamazon;
 
-use Bamazon;
-
-create table products (
-    item_id int primary key auto_increment,
-    product_name varchar(50) not null,
-    department_name varchar(255),
-    price float not null,
-	stock_quantity int default 0
-)
-
-insert into inventory (product_name, department_name, price, stock_quantity) values 
+CREATE TABLE IF NOT EXISTS products(
+ id INT AUTO_INCREMENT PRIMARY KEY,
+ product VARCHAR(30) NOT NULL,
+ department VARCHAR(30) NOT NULL,
+ price INT,
+ stock FLOAT
+ );
+ 
+ insert into products(product, department, price, stock) values 
 ("Hat","Apparel",21.99,50),
 ("Vanilla Ice Cream","Groceries",6.98,100),
 ("Banana","Groceries",0.69,500),
